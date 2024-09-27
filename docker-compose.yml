@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DOCKER_HOST=unix:///var/run/docker.sock
+    depends_on:
+      - sandbox
+
+  sandbox:
+    image: gcc:latest
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    security_opt:
+      - seccomp=unconfined
+    privileged: true
