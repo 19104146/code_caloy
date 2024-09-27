@@ -1,0 +1,20 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Environment
+.venv/
+.env
+
+# Ruff cache
+.ruff_cache/
+
+# IDE/Editor configuration files
+.idea/
+.vscode/
+.zed/
+
+# Miscellaneous
+*.log
+.DS_Store
+Thumbs.db
