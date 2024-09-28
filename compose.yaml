@@ -14,6 +14,6 @@ services:
     command: tail -f /dev/null
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - ./sandbox:/sandbox
+      - /tmp:/tmp
     security_opt:
       - seccomp=unconfined
