@@ -6,10 +6,10 @@ from typing_extensions import Any, Dict
 
 
 @cache
-def get_routes() -> Dict[str, Any]:
+def get_courses() -> Dict[str, Any]:
     try:
-        with open("routes.json", "r") as f:
-            routes = json.load(f)
-        return routes
+        with open("courses.json", "r") as f:
+            courses = json.load(f)
+        return courses
     except (JSONDecodeError, FileNotFoundError) as e:
-        raise Exception(f"Error reading routes.json: {e}")
+        raise Exception(f"Error reading courses.json: {e}")
